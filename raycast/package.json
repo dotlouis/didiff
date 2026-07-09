@@ -34,8 +34,8 @@
       "description": "URL where didiff is running (e.g. http://localhost:4173 after npm run preview)",
       "type": "textfield",
       "required": false,
-      "default": "https://difdif-production.up.railway.app",
-      "placeholder": "https://difdif-production.up.railway.app"
+      "default": "http://localhost:4173",
+      "placeholder": "http://localhost:4173"
     }
   ],
   "dependencies": {

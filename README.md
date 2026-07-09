@@ -4,10 +4,6 @@
 
 Powered by [Pierre’s `@pierre/diffs`](https://diffs.com/docs).
 
-## Live
-
-**https://difdif-production.up.railway.app**
-
 ## Features
 
 - Paste original + modified → character-level inline diffs
@@ -29,12 +25,11 @@ Powered by [Pierre’s `@pierre/diffs`](https://diffs.com/docs).
 npm install
 npm run dev
 npm run build && npm run preview
-railway up -y   # redeploy
 ```
 
 ## Raycast
 
-Default URL: production. See `raycast/README.md`.
+Point the extension at your local (or self-hosted) didiff URL. See `raycast/README.md`.
 
 ## Stack
 

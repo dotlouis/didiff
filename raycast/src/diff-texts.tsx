@@ -30,7 +30,7 @@ function b64url(text: string): string {
 
 export default function Command() {
   const { appUrl } = getPreferenceValues<Preferences>();
-  const base = (appUrl || "https://difdif-production.up.railway.app").replace(/\/$/, "");
+  const base = (appUrl || "http://localhost:4173").replace(/\/$/, "");
   const [isLoading, setIsLoading] = useState(false);
 
   async function openDiff(oldText: string, newText: string, language?: string) {

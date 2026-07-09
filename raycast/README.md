@@ -4,8 +4,12 @@ Fast launcher for the [didiff](../) local PWA.
 
 ## Setup
 
-1. Default URL points at production: `https://difdif-production.up.railway.app`  
-   (or run locally with `npm run build && npm run preview` and override the pref).
+1. Run the web app (from repo root):
+
+   ```bash
+   npm run build && npm run preview
+   # → http://127.0.0.1:4173
+   ```
 
 2. Install this extension:
 
@@ -17,7 +21,7 @@ Fast launcher for the [didiff](../) local PWA.
 
    In Raycast: **Import Extension** → select this `raycast/` folder.
 
-3. Preferences → **didiff URL** if you need a non-default origin.
+3. Preferences → **didiff URL** (default `http://localhost:4173`).
 
 ## Commands
 

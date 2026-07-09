@@ -16,7 +16,7 @@ const MARKER = "__DIDIFF_V1__";
 
 export default async function Command() {
   const { appUrl } = getPreferenceValues<Preferences>();
-  const url = (appUrl || "https://difdif-production.up.railway.app").replace(/\/$/, "");
+  const url = (appUrl || "http://localhost:4173").replace(/\/$/, "");
 
   const clip = (await Clipboard.readText()) ?? "";
   if (!clip.trim()) {
