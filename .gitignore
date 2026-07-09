@@ -1,0 +1,15 @@
+node_modules
+dist
+dist-ssr
+*.local
+.DS_Store
+*.tsbuildinfo
+.vite
+.railway
+raycast/node_modules
+raycast/.raycast
+.env
+.env.*
+!.env.example
+node_modules
+dist

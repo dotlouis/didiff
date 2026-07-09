@@ -1,0 +1,55 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "didiff",
+  "title": "didiff",
+  "description": "Quickly open didiff — local paste-to-paste character-level diff checker",
+  "icon": "icon.png",
+  "author": "didiff",
+  "categories": ["Developer Tools", "Productivity"],
+  "license": "MIT",
+  "commands": [
+    {
+      "name": "open-didiff",
+      "title": "Open didiff",
+      "description": "Open the local didiff PWA in your browser",
+      "mode": "no-view"
+    },
+    {
+      "name": "diff-texts",
+      "title": "Diff Texts",
+      "description": "Paste two texts and open them in didiff",
+      "mode": "view"
+    },
+    {
+      "name": "diff-clipboard",
+      "title": "Diff Clipboard into didiff",
+      "description": "Put the current clipboard into the original pane and open didiff",
+      "mode": "no-view"
+    }
+  ],
+  "preferences": [
+    {
+      "name": "appUrl",
+      "title": "didiff URL",
+      "description": "URL where didiff is running (e.g. http://localhost:4173 after npm run preview)",
+      "type": "textfield",
+      "required": false,
+      "default": "https://difdif-production.up.railway.app",
+      "placeholder": "https://difdif-production.up.railway.app"
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "^1.94.0"
+  },
+  "devDependencies": {
+    "@raycast/eslint-config": "^1.0.11",
+    "@types/node": "^22.13.10",
+    "@types/react": "^19.0.10",
+    "typescript": "^5.8.2"
+  },
+  "scripts": {
+    "build": "ray build",
+    "dev": "ray develop",
+    "lint": "ray lint"
+  }
+}

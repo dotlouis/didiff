@@ -1,0 +1,11 @@
+[build]
+builder = "DOCKERFILE"
+dockerfilePath = "Dockerfile"
+
+[deploy]
+# Force a shell so $PORT expands (Railway does not shell-expand bare start commands)
+startCommand = "sh -c 'exec serve -s dist -l \"$PORT\" --no-clipboard -n'"
+healthcheckPath = "/"
+healthcheckTimeout = 60
+restartPolicyType = "ON_FAILURE"
+restartPolicyMaxRetries = 5

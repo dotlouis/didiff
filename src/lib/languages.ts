@@ -1,0 +1,72 @@
+/** Common languages for the picker + filename mapping. */
+export const LANGUAGES = [
+  { id: 'auto', label: 'Auto-detect' },
+  { id: 'text', label: 'Plain text' },
+  { id: 'typescript', label: 'TypeScript' },
+  { id: 'javascript', label: 'JavaScript' },
+  { id: 'tsx', label: 'TSX' },
+  { id: 'jsx', label: 'JSX' },
+  { id: 'json', label: 'JSON' },
+  { id: 'html', label: 'HTML' },
+  { id: 'css', label: 'CSS' },
+  { id: 'scss', label: 'SCSS' },
+  { id: 'python', label: 'Python' },
+  { id: 'go', label: 'Go' },
+  { id: 'rust', label: 'Rust' },
+  { id: 'java', label: 'Java' },
+  { id: 'kotlin', label: 'Kotlin' },
+  { id: 'swift', label: 'Swift' },
+  { id: 'c', label: 'C' },
+  { id: 'cpp', label: 'C++' },
+  { id: 'csharp', label: 'C#' },
+  { id: 'ruby', label: 'Ruby' },
+  { id: 'php', label: 'PHP' },
+  { id: 'shell', label: 'Shell' },
+  { id: 'sql', label: 'SQL' },
+  { id: 'yaml', label: 'YAML' },
+  { id: 'toml', label: 'TOML' },
+  { id: 'markdown', label: 'Markdown' },
+  { id: 'xml', label: 'XML' },
+  { id: 'graphql', label: 'GraphQL' },
+  { id: 'dockerfile', label: 'Dockerfile' },
+  { id: 'diff', label: 'Diff / Patch' },
+] as const
+
+export type LanguageId = (typeof LANGUAGES)[number]['id']
+
+/** Map language id → filename extension Pierre/Shiki can infer from. */
+export const LANG_TO_FILENAME: Record<string, string> = {
+  text: 'snippet.txt',
+  typescript: 'snippet.ts',
+  javascript: 'snippet.js',
+  tsx: 'snippet.tsx',
+  jsx: 'snippet.jsx',
+  json: 'snippet.json',
+  html: 'snippet.html',
+  css: 'snippet.css',
+  scss: 'snippet.scss',
+  python: 'snippet.py',
+  go: 'snippet.go',
+  rust: 'snippet.rs',
+  java: 'snippet.java',
+  kotlin: 'snippet.kt',
+  swift: 'snippet.swift',
+  c: 'snippet.c',
+  cpp: 'snippet.cpp',
+  csharp: 'snippet.cs',
+  ruby: 'snippet.rb',
+  php: 'snippet.php',
+  shell: 'snippet.sh',
+  sql: 'snippet.sql',
+  yaml: 'snippet.yaml',
+  toml: 'snippet.toml',
+  markdown: 'snippet.md',
+  xml: 'snippet.xml',
+  graphql: 'snippet.graphql',
+  dockerfile: 'Dockerfile',
+  diff: 'snippet.diff',
+}
+
+export function filenameForLang(lang: string): string {
+  return LANG_TO_FILENAME[lang] ?? 'snippet.txt'
+}
